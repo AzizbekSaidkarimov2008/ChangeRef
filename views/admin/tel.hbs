@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="product_korish">
+        {{#each telefons}}
+        <div class="col-4" style="margin-bottom: 50px;">
+            <div class="product_card">
+                <h1><i class="fas fa-phone-volume"></i> +{{tel}}</h1>
+            </div>
+            <div class="card-footer">
+                <a href="/admin/tel/edit/{{id}}" class="btn btn-primary">O'zgartirish</a>
+                <a href="/admin/tel/delete/{{id}}" class="btn btn-danger">O'chirish</a>
+                {{!-- <a href="/admin/product/read" class="btn btn-primary">Yaratish</a> --}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>

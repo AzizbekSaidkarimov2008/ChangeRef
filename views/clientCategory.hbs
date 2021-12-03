@@ -1,0 +1,158 @@
+{{!-- <h1>Categories client page</h1>
+
+<div class="container">
+    <h2 class="catigories_h2">Kategoriya nomi: <span>{{categoryName}}</span></h2>
+    <div class="product_korish">
+        {{#each products}}
+        <a href="/read/{{_id}}"> {{productName}} </a>
+        {{/each}}
+    </div>
+</div> --}}
+
+{{!-- <header>
+    <div class="nav-top">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-3">
+                    <div class="logo">
+                        <a class="logo-link" href="#!">WebReference</a>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="nav-top-navbar">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Bosh sahifa</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ma'lumotlar
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {{#each category}}
+                                    <li><a class="dropdown-item" href="/view/{{id}}">{{categoryName}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Biz haqimizda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Qidiruv..." aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Qidirish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> --}}
+
+
+<section style="padding-top: 100px;">
+    <div class="section-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h2 class="html-title">{{categoryName}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <div class="section-search">
+                        <input class="searching" placeholder="Tez qidirish..." />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="menu">
+                        <ul class="menu-items">
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">!,A</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">B</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">C</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">D</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">E,F</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">H</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">I</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">K,L</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">M</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">N</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">O</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">P</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">Q,R</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">S</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">T,U</a>
+                            </li>
+                            <li class="menu-title">
+                                <a class="menu-link" href="#!">V,W</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <div class="a-text">
+                        <h3 class="a-text-info">{{categoryName}}</h3>
+                    </div>
+                </div>
+                <div class="col-11">
+                    <div class="ProduductNames">
+                        {{#each products}}
+                        <ul class="a-title">
+                            <li class="a-item"><a class="a-link productA" href="/read/{{_id}}" >{{productName}}</a></li>
+                        </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

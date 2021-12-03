@@ -1,0 +1,46 @@
+<div class="product_form">
+    <div class="container">
+    <div class="row justify-content-center" style="margin-bottom: 100px;">
+        <div class="col-7">
+            <form action="/admin/product/add" method="POST" enctype="multipart/form-data">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="productName">Mahsulot nomi</label>
+            <input type="text" class="form-control" name="productName" id="productName">
+        </div>
+
+        <div class="form-group">
+            <label for="productText">Mahsulot text</label>
+            <input type="text" class="form-control" name="productText" id="productText">
+        </div>
+
+        <div class="form-group">
+            <label for="productSyntax">Mahsulot sintaksis</label>
+            <input type="text" class="form-control" name="productSyntax" id="productSyntax">
+        </div>
+        <div class="form-group">
+            <label for="productImg">Mahsulot sintaksis</label>
+            <input type="file" class="form-control" name="productImg" id="productImg">
+        </div>
+        {{#if categories.length}}
+        <div class="form-group">
+            <label for="categoryId">Mahsulot kategoriyasi</label>
+            <select class="form-control" name="categoryId" id="categoryId">
+                {{#each categories}}
+                <option value="{{id}}" id="{{id}}">{{categoryName}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{else}}
+        <p>is empti</p>
+        {{/if}}
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary" type="submit">Yaratish</button>
+        {{!-- <a href="/admin/product/read" class="btn btn-primary">Yaratish</a> --}}
+    </div>
+</form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,12 @@
+<div class="categoriya_div">
+{{#each category}}
+<div class="categoryView">
+    <a href="/admin/category/read/{{id}}" class="categoryName"> {{categoryName}} </a>
+    <p class="categoryBacround">{{background}}</p>
+    <div class="buttons">
+        <a href="/admin/category/delete/{{id}}"><button type="button" class="btn btn-danger">O`chirish</button></a>
+        <a href="/admin/category/edit/{{id}}"><button type="button" class="btn btn-primary">O`zgartirish</button></a>
+    </div>
+</div>
+{{/each}}
+</div>

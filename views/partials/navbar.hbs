@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+        {{#if navInfo}}
+        {{#each navInfo}}
+        <div class="content-box d-flex align-items-center">
+            <div class="navbar_img">
+                <img src="/images/{{img}}" alt="png" />
+            </div>
+            <a class="navtitle" href="/">{{navtitle}}</a>
+        </div>
+        {{/each}}
+        {{else}}
+        is empti
+        {{/if}}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="men">
+            <a href="/admin" style="margin-right: 20px;"><button class="btn btn-success">Admin</button></a>
+            <div class="dropdown">
+                <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Katego`riya
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="/admin/category/add">Katego`riya qo`shish</a></li>
+                    <li><a class="dropdown-item" href="/admin/category/read">Katego`riyani ko`rish</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Teglar
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="/admin/product/add">Teg qo`shish</a></li>
+                    <li><a class="dropdown-item" href="/admin/product/read">Teglarni ko`rish</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Saytlar
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="/admin/create/view">Logo va tel qo`shish</a></li>
+                    <li><a class="dropdown-item" href="/admin/footerInfo/add">Saytlar qo`shish</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="reg">
+            <a href="/auth/register" type="button" class="btn btn-primary">Registratsiya</a>
+            <a href="/auth/logout" type="button" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,103 @@
+<header>
+    <div class="nav-top">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-3">
+                    <div class="logo">
+                        {{#each navInfo}}
+                        <img src="/images/{{img}}" alt="{{img}}" width="200" height="67">
+                        <p class="navTitle">{{navtitle}}</p>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="nav-top-navbar">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Bosh sahifa</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ma'lumotlar
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {{#each category}}
+                                    <li><a class="dropdown-item" href="/view/{{id}}">{{categoryName}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Biz haqimizda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" class="btn-primary" href="/auth/login">Login</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    {{!-- <form class="d-flex">
+                        <input type="text" name="" id="" class="form-control search_input" onkeyup='sendData(this)'>
+                        <div id="searchResults"></div>
+                        <button class="form-control" type="submit">Search</button>
+                    </form> --}}
+
+
+                    <div class="search_input col-lg-6">
+                        <form class="d-flex">
+                            <input type="text" name="" id="" class="form-control search_input" placeholder="Search"
+                                onkeyup='sendData(this)'>
+                            <div id="searchResults"></div>
+                            <button class="form-control" type="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<script>
+    function sendData(e) {
+        const searchResults = document.getElementById("searchResults");
+        let match = e.value.match(/^[a-zA-Z]*/);
+        let match2 = e.value.match(/\s*/);
+        if (match2[0] === e.value) {
+            searchResults.innerHTML = "";
+            return;
+        }
+        if (match[0] === e.value) {
+            fetch("getUsers", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    payload: e.value
+                }),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    let payload = data.payload;
+                    searchResults.innerHTML = "";
+                    if (payload.length < 1) {
+                        searchResults.innerHTML =
+                            "<p>Uzur. Bunday mahsulotni topa olmadim</p>";
+                        return;
+                    }
+
+                    payload.forEach((item, index) => {
+                        if (index > 0) searchResults.innerHTML += "<hr>";
+                        searchResults.innerHTML += `<a href='/view/${item._id}'> ${item.productName}</a>`;
+                    });
+                });
+            return;
+        }
+        searchResults.innerHTML = "";
+    }
+</script>

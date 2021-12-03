@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <h1>Qo'shish</h1>
+    <form action="/admin/create/view" method="POST" enctype="multipart/form-data">
+      <label for="">Sayt logosi</label>
+      <input id="img" name="img" type="file" />
+      <br>
+      <br />
+      <label for="">Sayt nomi</label>
+      <input id="navtitle" name="navtitle" type="text" placeholder="Sayt nomi" />
+      <br /><br />
+      <label for="">Tel qo'shish</label>
+      <input id="tel" name="tel" type="text" placeholder="Tel qo'shish" />
+      <br /><br />
+      <div class="cub">
+        {{!-- <a href="/">Bosh sahifa</a> --}}
+        <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;"  >Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{!-- <div class="container">
+  <div class="row">
+    <h1>O'zgartirish</h1>
+    <form action="/create/edit/{{navinfo.id}}" method="POST" enctype="multipart/form-data">
+      <label for="">Sayt logosi</label>
+      <input id="img" name="img" type="file" value="{{navinfo.img}}" />
+      <br>
+      <br />
+      <label for="">Sayt nomi</label>
+      <input id="navtitle" name="navtitle" type="text" placeholder="Sayt nomi" value="{{navinfo.navtitle}}" />
+      <br /><br />
+      <div class="cub">
+        <a href="/">Bosh sahifa</a>
+        <input type="submit" />
+      </div>
+    </form>
+  </div>
+</div> --}}
+{{!-- <div class="content-text">
+  <a href="/admin/create/edit/{{id}}"><button class="btn btn-primary">O'zgartirish</button></a>
+  <a href="/admin/create/delete/{{id}}"><button class="btn btn-danger">O'chirish</button></a>
+</div> --}}

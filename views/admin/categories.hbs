@@ -1,0 +1,35 @@
+<h1>Hello categories</h1>
+{{!-- {{#each products}}
+<h1>{{productName}}</h1>
+<h1>{{productText}}</h1>
+<h1>{{productSyntax}}</h1>
+<h1>{{productImg}}</h1>
+<img src="/images/{{productImg}}" alt="{{productImg}}">
+{{/each}} --}}
+
+<div class="container">
+    <h2 class="catigories_h2">Kategoriya nomi: <span>{{categoryName}}</span></h2>
+    <div class="product_korish">
+        {{#each products}}
+        <div class="col-4">
+            <div class="product_card">
+                <h1> {{productName}} </h1>
+                <div class="product_text">
+                    <p> {{productText}} </p>
+                </div>
+                <hr>
+                <p> {{productSyntax}} </p>
+                <hr>
+                <img src="/images/{{productImg}}" alt="{{productImg}}">
+                <hr>
+                <div class="product_buttom">
+                    <a href="/admin/product/delete/{{id}}"><button type="button"
+                            class="btn btn-danger">O'chirish</button></a>
+                    <a href="/admin/product/edit/{{id}}"><button type="button"
+                            class="btn btn-primary">O'zgartirish</button></a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

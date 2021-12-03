@@ -1,0 +1,27 @@
+<h1>Edit</h1>
+
+<div class="container">
+    <h1>Footer uchun o'zgartirish bo'limi</h1>
+    <div class="row">
+        <form action="/admin/footerInfo/edit/{{footerRight.id}}" method="POST">
+            <div class="manbaa" style="display: flex;justify-content: space-evenly;">
+                <div class="manbaa-flex">
+                    <br>
+                    <label for="">Instagram</label>
+                    <input id="link1" name="link1" type="text" value="{{footerRight.link1}}" />
+                    <br><br>
+                    <label for="">Telegram</label>
+                    <input id="link2" name="link2" type="text" value="{{footerRight.link2}}" />
+                    <br><br>
+                    <label for="">Change</label>
+                    <input id="link3" name="link3" type="text" value="{{footerRight.link3}}" />
+                    <br>
+                    <br /><br />
+                <div class="cub">
+                    <button class="btn btn-warning" type="submit">Send</button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

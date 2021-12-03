@@ -1,0 +1,18 @@
+<h1>Hello read</h1>
+{{#if navInfo}}
+{{#each navInfo}}
+<div class="content-box d-flex align-items-center">
+    <div class="navbar_img">
+        <img src="/images/{{img}}" alt="png" />
+    </div>
+    <a class="navtitle" href="#!">{{navtitle}}</a>
+    <a href="#" class="tel">{{tel}}</a>
+    <div class="content-text">
+        <a href="/admin/create/edit/{{id}}"><button class="btn btn-primary">O'zgartirish</button></a>
+        <a href="/admin/create/delete/{{id}}"><button class="btn btn-danger">O'chirish</button></a>
+    </div>
+</div>
+{{/each}}
+{{else}}
+is empti
+{{/if}}

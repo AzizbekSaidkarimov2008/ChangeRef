@@ -1,0 +1,46 @@
+{{!-- <h1>attribute View</h1> --}}
+
+{{!-- <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="productNameAttribute"> {{productName}} </h1>
+      <h2 class="productTextAttribute"> {{productText}} </h2>
+      <div class="example">
+        <h2>Example</h2>
+        <h3> {{productSyntax}} </h3>
+      </div>
+      {{#if productImg}}
+      <img src="/images/{{productImg}} " alt="jpg">
+      {{/if}}
+    </div>
+  </div>
+</div> --}}
+
+<div class="tag">
+  <div class="tag-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <div class="tag-info-text">
+            <h2 class="tag-head">{{productName}}</h2>
+            <p class="tag-text">{{productText}}</p>
+          </div>
+          <div class="tag-syntax">
+            <h3 class="syntax">Sintaksis</h3>
+            <hr>
+            <p class="syntax-text">{{productSyntax}}</p>
+          </div>
+          {{#if productImg}}
+          <div class="infotag">
+            <h3 class="infotag-info"></h3>
+            <img src="/images/{{productImg}} " alt="jpg">
+            <hr>
+          </div>
+          {{/if}}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

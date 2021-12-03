@@ -1,0 +1,19 @@
+<div class="product_form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <form action="/admin/tel/edit/{{telefons.id}}" method="POST">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="tel">Telefone o'zgartirish</label>
+                            <input type="number" class="form-control" name="tel" id="{{id}}" value="{{telefons.tel}}">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">O'zgartirish</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

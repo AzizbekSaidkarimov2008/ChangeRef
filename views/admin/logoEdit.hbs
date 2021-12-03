@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <h1>O'zgartirish</h1>
+        <form action="/admin/create/edit/{{navinfo.id}}" method="POST" enctype="multipart/form-data">
+            <label for="">Sayt logosi</label>
+            <input id="img" name="img" type="file" value="{{navinfo.img}}" />
+            <br>
+            <br />
+            <label for="">Sayt nomi</label>
+            <input id="navtitle" name="navtitle" type="text" placeholder="Sayt nomi" value="{{navinfo.navtitle}}" />
+            <br /><br />
+            <label for="">Tel o'zgartirish</label>
+            <input id="tel" name="tel" type="text" placeholder="Tel qo'shish" value="{{navinfo.tel}}" />
+            <br /><br />
+            <div class="cub">
+                <button class="btn btn-primary" type="submit" style="margin-bottom: 20px ;" >Send</button>
+                {{!-- <a href="/">Bosh sahifa</a> --}}
+            </div>
+        </form>
+    </div>
+</div>

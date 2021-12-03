@@ -1,0 +1,33 @@
+{{!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-primary">
+                <form action="/admin/category/add" method="POST">
+                    <label for="categoryName">Kategoriya nomi</label>
+                    <input type="text" class="form-control" name="categoryName" id="categoryName">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+<div class="container">
+    <div class="row justify-content-center" style="margin-top:100px; margin-bottom: 100px;">
+        <div class="col-5">
+            <form class="for" action="/admin/category/add" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Kategoriya nomi</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1" name="categoryName" id="categoryName">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Fon rangi</span>
+                    <input type="text" class="form-control" placeholder="Inglizcha rang" aria-label="Username"
+                        aria-describedby="basic-addon1" name="background" id="background">
+                </div>
+                <button type="submit" class="btn btn-warning">Jo`natish</button>
+            </form>
+        </div>
+    </div>
+</div>

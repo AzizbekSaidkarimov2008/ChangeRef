@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="product_korish">
+        {{#each product}}
+        <div class="col-4" style="margin-bottom: 50px;">
+            <div class="product_card">
+                <h1> {{productName}} </h1>
+                <div class="product_text">
+                    <p> {{productText}} </p>
+                </div>
+                <hr>
+                <p> {{productSyntax}} </p>
+                <hr>
+                {{#if productImg}}
+                <img src="/images/{{productImg}} " alt="jpg" width="331" height="132">
+                <hr>
+                {{/if}}
+                <div class="product_buttom">
+                    <a href="/admin/product/delete/{{id}}"><button type="button"
+                            class="btn btn-danger">O'chirish</button></a>
+                    <a href="/admin/product/edit/{{id}}"><button type="button"
+                            class="btn btn-primary">O'zgartirish</button></a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
